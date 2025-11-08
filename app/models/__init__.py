@@ -1,4 +1,5 @@
-from .puiblisher import Publisher
+"""Модуль содержащий схемы БД"""
+from .publisher import Publisher
 from .book import Book
 from .reader import Reader
 from .borrowing import Borrowing
