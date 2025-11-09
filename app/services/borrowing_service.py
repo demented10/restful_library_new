@@ -76,7 +76,7 @@ class BorrowingService(BaseService[Borrowing, BorrowingCreate, BorrowingCreate])
     def get_active_borrowings(self) -> List[Borrowing]:
         return self.borrowing_repository.get_active_borrowings()
 
-    def get_overdue_borrowings(self, check_date : date  = None) -> List:
+    def get_overdue_borrowings(self, check_date : Optional[date]  = None) -> List:
         return self.borrowing_repository.get_overdue_borrowings(check_date)
 
     def get_reader_active_borrowings_count(self, reader_id: int) -> int:

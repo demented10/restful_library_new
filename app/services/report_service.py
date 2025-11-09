@@ -27,7 +27,6 @@ class ReportService:
         """Создает отчет и возвращает его в виде bytes"""
         data = list(self.generate_overdue_report_data(report_date))
         if not data:
-            # Возвращаем пустой отчет, если нет данных
             df = pd.DataFrame(columns=["reader_name", "book_title", "author", "borrow_date", "days_overdue"])
         else:
             df = pd.DataFrame(data)

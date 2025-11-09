@@ -10,7 +10,7 @@ class Book(Base):
     author = Column(String, nullable=False)
     year = Column(Integer, nullable= False)
     price = Column(Integer, nullable= False)
-    quantity = Column(Integer, nullable= False)
+    quantity = Column(Integer, default= 1)
 
     publisher_id = Column(Integer, ForeignKey("publishers.id"), nullable=False)
 

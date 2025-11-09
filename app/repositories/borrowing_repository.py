@@ -3,6 +3,8 @@ from datetime import date, timedelta
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import and_
 from app.models.borrowing import Borrowing
+from app.models.book import Book  
+from app.models.reader import Reader 
 from app.repositories.base_repository import BaseRepository
 
 class BorrowingRepository(BaseRepository[Borrowing]):
@@ -14,7 +16,7 @@ class BorrowingRepository(BaseRepository[Borrowing]):
             self.db.query(Borrowing)
             .options(
                 joinedload(Borrowing.reader),
-                joinedload(Borrowing.book).joinedload("publisher")
+                joinedload(Borrowing.book).joinedload(Book.publisher)
             )
             .all()
         )
@@ -24,7 +26,7 @@ class BorrowingRepository(BaseRepository[Borrowing]):
             self.db.query(Borrowing)
             .options(
                 joinedload(Borrowing.reader),
-                joinedload(Borrowing.book).joinedload("publisher")
+                joinedload(Borrowing.book).joinedload(Book.publisher)
             )
             .filter(Borrowing.id == id)
             .first()
@@ -51,7 +53,7 @@ class BorrowingRepository(BaseRepository[Borrowing]):
             .all()
         )
     
-    def get_overdue_borrowings(self, check_date: date = None) -> List[Borrowing]:
+    def get_overdue_borrowings(self,  check_date: Optional[date] = None) -> List[Borrowing]:
         if check_date is None:
             check_date = date.today()
         

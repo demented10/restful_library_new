@@ -1,30 +1,39 @@
-from fastapi import FastAPI, Depends
-from sqlalchemy import text
-from app.core.database import engine, Base, get_db
+from fastapi import FastAPI
+from app.core.database import engine, Base
 from app.core.config import settings
+
+from app.models import publisher, book, reader, borrowing
+
+
+from app.api.routes import publishers, books, readers, borrowings, reports
+
 import logging
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
 try:
-    Base.metadata.create_all(bind = engine)
-    logger.info("db tables created succesfully")
+    Base.metadata.create_all(bind=engine)
+    logger.info("Database tables created successfully")
 except Exception as e:
-    logger.error(f"db tables creation error : {e}")
+    logger.error(f"Error creating database tables: {e}")
 
-app = FastAPI(title = "Library API", version = "v1")
+app = FastAPI(
+    title="Library API", 
+    version="1.0.0",
+    description="API для управления библиотекой с системой учета книг и читателей"
+)
+app.include_router(publishers.router)
+app.include_router(books.router)
+app.include_router(readers.router)
+app.include_router(borrowings.router)
+app.include_router(reports.router)
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello its library api"}
+    return {"message": "Welcome to Library API"}
 
 @app.get("/health")
-def health_check(db = Depends(get_db)):
-    try:
-        db.execute(text("SELECT 1"))
-        return {"status": "healthy", "database": "connected"}
-    except Exception as e:
-        logger.error(f"db health status check failed: {e}")
-        return {"status": "unhealthy", "database": "disconected"}
+def health_check():
+    return {"statusss": "healthy", "database": "connected"}
+

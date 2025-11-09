@@ -8,7 +8,7 @@ class Borrowing(Base):
 
     id = Column(Integer, index = True, primary_key= True)
     reader_id = Column(Integer, ForeignKey("readers.id"), nullable = False)
-    book_id = Column(Integer, ForeignKey("book.id"), nullable= False)
+    book_id = Column(Integer, ForeignKey("books.id"), nullable= False)
     borrow_date = Column(Date, default=date.today, nullable = False)
 
     reader = relationship("Reader", back_populates="borrowings")

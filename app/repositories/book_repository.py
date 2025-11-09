@@ -2,6 +2,7 @@ from typing import List, Optional
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import or_
 from app.models.book import Book
+from app.models.publisher import Publisher
 from app.repositories.base_repository import BaseRepository
 
 class BookRepository(BaseRepository):
