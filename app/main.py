@@ -35,5 +35,5 @@ def read_root():
 
 @app.get("/health")
 def health_check():
-    return {"statusss": "healthy", "database": "connected"}
+    return {"status": "healthy", "database": "connected"}
 

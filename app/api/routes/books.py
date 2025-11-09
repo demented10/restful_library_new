@@ -78,7 +78,13 @@ def create_book(
     service: BookService = Depends(get_book_service),
 ):
     """Создать новую книгу"""
-    return service.create(book)
+    try:
+        return service.create(book)
+    except ValueError as e:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
 
 @router.put("/{book_id}", response_model=Book)
 def update_book(
@@ -87,13 +93,19 @@ def update_book(
     service: BookService = Depends(get_book_service),
 ):
     """Обновить книгу"""
-    book = service.update(book_id, book_update)
-    if not book:
+    try:
+        book = service.update(book_id, book_update)
+        if not book:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Book not found"
+            )
+        return book
+    except ValueError as e:
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Book not found"
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
         )
-    return book
 
 @router.delete("/{book_id}")
 def delete_book(

@@ -32,9 +32,10 @@ def get_publisher_service(
     return PublisherService(publisher_repo)
 
 def get_book_service(
-    book_repo: BookRepository = Depends(get_book_repository)
+    book_repo: BookRepository = Depends(get_book_repository),
+    publisher_repo: PublisherRepository = Depends(get_publisher_repository)
 ) -> BookService:
-    return BookService(book_repo)
+    return BookService(book_repo, publisher_repo)
 
 def get_reader_service(
     reader_repo: ReaderRepository = Depends(get_reader_repository)

@@ -10,6 +10,7 @@ services:
     depends_on:
       - db
     volumes:
+      - .:/app
       - ./logs:/app/logs
     command: >
       sh -c "uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
