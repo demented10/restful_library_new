@@ -9,6 +9,9 @@ class BookRepository(BaseRepository):
     def __init__(self, db: Session):
         super().__init__(Book, db)
 
+
+    
+
     def get_all_with_publisher(self) -> List[Book]:
         return self.db.query(Book).options(joinedload(Book.publisher)).all()
     

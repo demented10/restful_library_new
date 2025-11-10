@@ -50,7 +50,7 @@ class BorrowingService(BaseService[Borrowing, BorrowingCreate, BorrowingCreate])
         self.book_repository.decrease_quantity(book.id, 1)
 
         # Создаем запись о выдаче
-        borrowing_data = borrowing_in.dict()
+        borrowing_data = borrowing_in.model_dump()
         return self.borrowing_repository.create(borrowing_data)
 
     def return_book(self, borrowing_id: int) -> bool:

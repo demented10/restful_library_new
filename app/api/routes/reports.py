@@ -9,7 +9,7 @@ router = APIRouter(prefix="/reports", tags=["reports"])
 @router.get("/overdue")
 def get_overdue_report(
     report_date: date = Query(..., description="Дата для отчета в формате YYYY-MM-DD"),
-    format: str = Query("csv", regex="^(csv|xlsx)$", description="Формат отчета: csv или xlsx"),
+    format: str = Query("csv", pattern="^(csv|xlsx)$", description="Формат отчета: csv или xlsx"),
     service: ReportService = Depends(get_report_service),
 ):
     """
