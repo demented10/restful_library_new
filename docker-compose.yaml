@@ -1,20 +1,7 @@
 
 
 services:
-  api:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      - DATABASE_URL=postgresql://library_user:library_password@db:5432/library_db
-    depends_on:
-      - db
-    volumes:
-      - .:/app
-      - ./logs:/app/logs
-    command: >
-      sh -c "uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
-    
+
   db:
     image: postgres:15
     environment:
@@ -31,6 +18,31 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://library_user:library_password@db:5432/library_db
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+      - ./logs:/app/logs
+    command: >
+      sh -c "uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+
+  api-fixtures:
+    build: .
+    environment:
+      - DATABASE_URL=postgresql://library_user:library_password@db:5432/library_db
+    depends_on:
+      - db
+    volumes:
+      - ./logs:/app/logs
+    command: >
+      sh -c "sleep 5 && python utils/generate_fixtures.py && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
 
 volumes:
   postgres_data:
