@@ -6,7 +6,7 @@ REST API для управления библиотекой с полным CRUD
 ## Быстрый старт
 ```bash
 git clone https://github.com/demented10/restful_library_new.git
-cd library-api
+
 docker-compose up -d --build
 ```
 
@@ -37,4 +37,5 @@ app/
 ├── schemas/       # Pydantic схемы
 └── services/      # Бизнес логика
 ```
+
 
