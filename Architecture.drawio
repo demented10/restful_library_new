@@ -1,0 +1,130 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0" version="28.2.9">
+  <diagram name="Page-1" id="Brhn8UcS42AgPV4E-UQz">
+    <mxGraphModel dx="1829" dy="1241" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DhieVFejgtBvS2QjoyMY-54" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="70" y="1180" width="1130" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-37" value="DATABASE (PostgreSql)" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-54">
+          <mxGeometry width="1130" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-42" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;publishers&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;city&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-54">
+          <mxGeometry x="10" y="60" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-44" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;books&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FK1&lt;/td&gt;&lt;td&gt;publisher_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;title, author, year, price, quantity&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-54">
+          <mxGeometry x="210" y="60" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-45" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;readers&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;td&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;full_name, address, phone&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-54">
+          <mxGeometry x="415" y="60" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-48" value="&lt;div style=&quot;box-sizing: border-box; width: 100%; background: rgb(228, 228, 228); padding: 2px;&quot;&gt;borrowings&lt;/div&gt;&lt;table style=&quot;width:100%;font-size:1em;&quot; cellpadding=&quot;2&quot; cellspacing=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;PK&lt;/td&gt;&lt;td&gt;uniqueId&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FK&lt;/td&gt;&lt;td&gt;reader_id, book_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;borrow_date&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-54">
+          <mxGeometry x="780" y="60" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-36" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="70" y="780" width="1130" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-24" value="REPOSITORY LAYER (app/repositories)" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-36">
+          <mxGeometry width="1130" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-26" value="&lt;div&gt;publisher_repository.py&lt;/div&gt;&lt;div&gt;- get_all()&lt;/div&gt;&lt;div&gt;- get_by_id()&lt;/div&gt;&lt;div&gt;- create()&lt;/div&gt;&lt;div&gt;- update()&lt;/div&gt;&lt;div&gt;- delete()&lt;/div&gt;&lt;div&gt;- get_by_name()&lt;/div&gt;&lt;div&gt;- get_by_city()&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-36">
+          <mxGeometry x="15" y="57.5" width="170" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-27" value="&lt;div&gt;book_repository.py&lt;/div&gt;&lt;div&gt;- get_all()&lt;/div&gt;&lt;div&gt;- get_by_id()&lt;/div&gt;&lt;div&gt;-get_by_name()&lt;/div&gt;&lt;div&gt;- create()&lt;/div&gt;&lt;div&gt;- update()&lt;/div&gt;&lt;div&gt;- delete()&lt;br&gt;&amp;nbsp; -&amp;nbsp; get_all_with_publisher&amp;nbsp; &amp;nbsp; - get_by_id_with_publisher&lt;br&gt;- search_books&lt;br&gt;&amp;nbsp; &amp;nbsp;- get_by_author&lt;br&gt;&amp;nbsp; &amp;nbsp;- get_by_publisher&lt;br&gt;&amp;nbsp; &amp;nbsp;- get_available_books&lt;br&gt;&amp;nbsp; &amp;nbsp;- decrease_quantity&lt;br&gt;&amp;nbsp; &amp;nbsp;- increase_quantity&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-36">
+          <mxGeometry x="205" y="57.5" width="170" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-31" value="&lt;div&gt;reader_repository.py&lt;/div&gt;&lt;div&gt;- get_all()&lt;/div&gt;&lt;div&gt;- get_by_id()&lt;/div&gt;&lt;div&gt;- create()&lt;/div&gt;&lt;div&gt;- update()&lt;/div&gt;&lt;div&gt;- delete()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;- get_by_phone()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- search_by_name()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_with_borrowings()&lt;br&gt;&amp;nbsp;- get_active_borrowings_count()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-36">
+          <mxGeometry x="390" y="57.5" width="210" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-33" value="&lt;div&gt;borrowing_repository.py&lt;/div&gt;&lt;div&gt;- get_all()&lt;/div&gt;&lt;div&gt;- get_by_id()&lt;/div&gt;&lt;div&gt;- create()&lt;/div&gt;&lt;div&gt;- update()&lt;/div&gt;&lt;div&gt;- delete()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;- create_borrowing()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- return_book()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_all_with_details()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_by_reader()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_by_book()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_active_borrowings()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_overdue_borrowings()&lt;br&gt;&amp;nbsp;- get_reader_active_borrowings_count()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-36">
+          <mxGeometry x="750" y="57.5" width="240" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-25" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="70" y="440" width="1130" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-12" value="&lt;pre&gt;SERVICE LAYER (app/services)&lt;/pre&gt;&lt;pre&gt;&lt;br&gt;&lt;/pre&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;verticalAlign=top;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-25">
+          <mxGeometry width="1130" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-13" value="&lt;div&gt;publisher_service.py&lt;/div&gt;&lt;div&gt;- get_all()&lt;/div&gt;&lt;div&gt;- get_by_id()&lt;/div&gt;&lt;div&gt;- create()&lt;/div&gt;&lt;div&gt;- update()&lt;/div&gt;&lt;div&gt;- delete()&lt;/div&gt;&lt;div&gt;- get_by_name()&lt;/div&gt;&lt;div&gt;- get_by_city()&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-25">
+          <mxGeometry x="15" y="55" width="170" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-14" value="&lt;div&gt;book_service.py&lt;/div&gt;&lt;div&gt;- get_all()&lt;/div&gt;&lt;div&gt;- get_by_id()&lt;/div&gt;&lt;div&gt;-get_by_name()&lt;/div&gt;&lt;div&gt;- create()&lt;/div&gt;&lt;div&gt;- update()&lt;/div&gt;&lt;div&gt;- delete()&lt;br&gt;&amp;nbsp; -&amp;nbsp; get_all_with_publisher&amp;nbsp; &amp;nbsp; - get_by_id_with_publisher&lt;br&gt;- search_books&lt;br&gt;&amp;nbsp; &amp;nbsp;- get_by_author&lt;br&gt;&amp;nbsp; &amp;nbsp;- get_by_publisher&lt;br&gt;&amp;nbsp; &amp;nbsp;- get_available_books&lt;br&gt;&amp;nbsp; &amp;nbsp;- decrease_quantity&lt;br&gt;&amp;nbsp; &amp;nbsp;- increase_quantity&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-25">
+          <mxGeometry x="205" y="55" width="170" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-17" value="&lt;div&gt;reader_service.py&lt;/div&gt;&lt;div&gt;- get_all()&lt;/div&gt;&lt;div&gt;- get_by_id()&lt;/div&gt;&lt;div&gt;- create()&lt;/div&gt;&lt;div&gt;- update()&lt;/div&gt;&lt;div&gt;- delete()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;- get_by_phone()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- search_by_name()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_with_borrowings()&lt;br&gt;&amp;nbsp;- get_active_borrowings_count()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-25">
+          <mxGeometry x="390" y="55" width="210" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-20" value="&lt;div&gt;borrowing_service.py&lt;/div&gt;&lt;div&gt;- get_all()&lt;/div&gt;&lt;div&gt;- get_by_id()&lt;/div&gt;&lt;div&gt;- create()&lt;/div&gt;&lt;div&gt;- update()&lt;/div&gt;&lt;div&gt;- delete()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;- create_borrowing()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- return_book()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_all_with_details()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_by_reader()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_by_book()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_active_borrowings()&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;- get_overdue_borrowings()&lt;br&gt;&amp;nbsp;- get_reader_active_borrowings_count()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-25">
+          <mxGeometry x="620" y="55" width="240" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-22" value="&lt;div&gt;report_service.py&lt;/div&gt;&lt;div&gt;- generate_overdue_report_data()&lt;/div&gt;&lt;div&gt;- create_overdue_report()&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-25">
+          <mxGeometry x="880" y="55" width="210" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-11" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="70" y="250" width="1130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-2" value="&lt;pre&gt;API LAYER (app/api)&lt;/pre&gt;" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;align=center;verticalAlign=top;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-11">
+          <mxGeometry width="1130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-5" value="&lt;div&gt;/publishers&lt;/div&gt;&lt;div&gt;get post put delete&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-11">
+          <mxGeometry x="8.68828282828283" y="50" width="182.62626262626264" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-6" value="&lt;div&gt;/books&lt;/div&gt;&lt;div&gt;get post put delete&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-11">
+          <mxGeometry x="198.6869696969697" y="50" width="182.62626262626264" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-7" value="&lt;div&gt;/readers&lt;/div&gt;&lt;div&gt;get post put delete&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-11">
+          <mxGeometry x="403.6868686868687" y="50" width="182.62626262626264" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-8" value="&lt;div&gt;/borrowings&lt;/div&gt;&lt;div&gt;get post put delete&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-11">
+          <mxGeometry x="648.6843434343434" y="50" width="182.62626262626264" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-9" value="&lt;div&gt;/reports/overdue&lt;/div&gt;&lt;div&gt;get (csv/xlsx)&lt;/div&gt;" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;" vertex="1" parent="DhieVFejgtBvS2QjoyMY-11">
+          <mxGeometry x="893.6830303030304" y="50" width="182.62626262626264" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-5" target="DhieVFejgtBvS2QjoyMY-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-6" target="DhieVFejgtBvS2QjoyMY-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-7" target="DhieVFejgtBvS2QjoyMY-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-8" target="DhieVFejgtBvS2QjoyMY-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-9" target="DhieVFejgtBvS2QjoyMY-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-14" target="DhieVFejgtBvS2QjoyMY-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-13" target="DhieVFejgtBvS2QjoyMY-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-17" target="DhieVFejgtBvS2QjoyMY-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-20" target="DhieVFejgtBvS2QjoyMY-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-22" target="DhieVFejgtBvS2QjoyMY-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-26" target="DhieVFejgtBvS2QjoyMY-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-27" target="DhieVFejgtBvS2QjoyMY-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-31" target="DhieVFejgtBvS2QjoyMY-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DhieVFejgtBvS2QjoyMY-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DhieVFejgtBvS2QjoyMY-33" target="DhieVFejgtBvS2QjoyMY-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
