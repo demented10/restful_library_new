@@ -37,5 +37,6 @@ app/
 ├── schemas/       # Pydantic схемы
 └── services/      # Бизнес логика
 ```
+Визуализация архитектуры находится в файле Architecture.drawio
 
 
