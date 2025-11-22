@@ -38,5 +38,5 @@ app/
 └── services/      # Бизнес логика
 ```
 Визуализация архитектуры находится в файле Architecture.drawio
-
+ER-диаграмма находится в файле ER_book_managment_system.drawio
 
